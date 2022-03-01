@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    //export default 
+    const files = ['photo', 'postcard', 'photo', 'photo', 'video'];
+    function fixFiles (files) {
+ // ¡No olvides compartir tu solución en redes!
+    
+    let duplicados = [];
+    
+    const tempArray = [...files].sort();
+    var n=1;
+    for (let i = 0; i < tempArray.length; i++) {
+    if (tempArray[i + 1] === tempArray[i]) {
+        duplicados.push(tempArray[i + 1].concat('('+ n++ +')'));
+    }
+    else{
+        duplicados.push(tempArray[i]);
+    }
+    }
+
+    files=duplicados.sort();
+    document.write('resultado : ' +files+'<br>');
+    return files;
+    }
+    
+    //const a=['a1','a1','a2','a1'];
+    fixFiles(files);
+    document.write(files);
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
